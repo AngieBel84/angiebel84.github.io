@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Echiquier - Angela Bellini</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <!-- Ton CSS perso -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+    .page-title {
+      text-align: center;
+      font-size: 2em;
+    }
+    galerie-main { 
+      margin-top: 20px;
+    }
+    .galerie-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .oeuvre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px; /* même taille que l’image */
+        /* Ne pas fixer la hauteur, ou laisser auto */
+      overflow: visible; /* important si overflow caché */
+    }
+
+    .oeuvre img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .oeuvre img:hover {
+      transform: scale(1.05);
+    }
+
+    .oeuvre p {
+      color: #333;
+      text-align: center;
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .header {
+      padding-bottom: 100px;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    .gdesc, .gslide-desc {
+      background-color: rgb(0, 0, 0, 0.8) !important;
+      color: white !important;
+      padding: 20px !important;
+      font-size: 16px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      line-height: 1.5;
+      text-align: left;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Logo artiste.jpg" alt="Logo Angela Bellini" class="logo-img">
+        </a>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="artiste.html">L'artiste</a></li>
+        <li><a href="galerie.html">Les Œuvres</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="ses-expositions.html">Ses expositions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="galerie-main">
+    <h1 class="page-title">Echiquier</h1>
+
+  <div class="galerie-grid">
+    <div class="oeuvre">
+      <a href="images/la danse du papillon.jpg" class="glightbox" data-gallery="galerie" data-title="La danse du papillon- 2018<br>Huile sur papier - 40 x 50 cm avec passepartout<br>150€">
+        <img src="images/la danse du papillon.jpg" alt="La danse du papillon">
+      </a>
+      <p><strong>La danse du papillon - 2018</strong></p>
+      <p>Huile sur papier entoilé - 40 x 50 cm</p>
+      <p>150€</p>
+    </div>
+
+      <div class="oeuvre" >
+        <a href="images/la rainforest.jpg" class="glightbox" data-gallery="galerie" data-title="La rainforest - 2018<br>Huile sur papier - 25 x 25 cm avec passepartout<br>40€">
+          <img src="images/la rainforest.jpg" alt="La rainforest">
+      </a>
+        <p><strong>La rainforest - 2018</strong></p>
+        <p>Huile sur papier entoilé- 25 x 25 cm</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Discussion avec poissons.jpg" class="glightbox" data-gallery="galerie" data-title="Discussion avec les poissons - 2019<br>Huile sur papier - 25 x 25 cm avec passepartout<br>40€">
+          <img src="images/Discussion avec poissons.jpg" alt="Discussion avec les poissons">
+      </a>
+        <p><strong>Discussion avec les poissons- 2019</strong></p>
+        <p>Huile sur papier entoilé- 25 x 25 cm</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/autoflagellation.jpg" class="glightbox" data-gallery="galerie" data-title="Autoflagellation - 2021<br>Acrylique sur papier entoilé - 41 x 33 cm<br>500€">
+          <img src="images/autoflagellation.jpg" alt="Autoflagellation">
+        </a>
+        <p><strong>Autoflagellation - 2021</strong></p>
+        <p>Acrylique sur papier entoilé - 41 x 33 cm</p>
+        <p>500€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/en equilibre.jpg" class="glightbox" data-gallery="galerie" data-title="En équilibre - 2019<br>Huile sur papier- 25 x 25 cm avec passepartout<br>40€">
+          <img src="images/en equilibre.jpg" alt="En équilibre">
+        </a>
+        <p><strong>En équilibre - 2019</strong></p>
+        <p>Huile sur papier entoilé- 25 x 25 cm</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Cheffe cuisinière.jpg" class="glightbox" data-gallery="galerie" data-title="Cheffe cuisinière - 2019 <br>Huile sur papier - 30 x 40 cm avec passepartout<br>80€">
+          <img src="images/Cheffe cuisinière.jpg" alt="cheffe Cuisinière">
+        </a>
+        <p><strong>Cheffe Cuisinière - 2019</strong></p>
+        <p>Huile sur papier entoilé - 30 x 40 cm</p>
+        <p>80€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Promenade.jpg" class="glightbox" data-gallery="galerie" data-title="Promenade - 2019 <br>Huile sur papier - 30 x 40 cm avec passepartout<br>80€">
+          <img src="images/Promenade.jpg" alt="Promenade">
+      </a>
+        <p><strong>Promenade - 2021</strong></p>
+        <p>Huile sur papier entoilé - 30 x 40 cm</p>
+        <p>80€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Mère Noel.jpg" class="glightbox" data-gallery="galerie" data-title="Mère Noel - 2019 <br>Huile sur papier - 30 x 30 cm<br>80€">
+          <img src="images/Mère Noel.jpg" alt="Mère Noel">
+      </a>
+        <p><strong>Mère Noel - 2019 </strong></p>
+        <p>Huile sur papier entoilé - 30 x 30 cm</p>
+        <p>80€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Therapy station_Bellini.jpg" class="glightbox" data-gallery="galerie" data-title="Therapy station - 2020 <br>Acrylique sur toile - 50 x 50 cm<br>500€">
+          <img src="images/Therapy station_Bellini.jpg" alt="Therapy station_Bellini">
+      </a>
+        <p><strong>Therapy station - 2020</strong></p>
+        <p>Acrylique sur toile - 50 x 50 cm</p>
+        <p>500€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Détente.jpg" class="glightbox" data-gallery="galerie" data-title="Détente - 2019<br>Huile sur papier - 40 x 30 cm avec passepartout<br>80€">
+          <img src="images/Détente.jpg" alt="Détente">
+      </a>
+        <p><strong>Détente - 2019</strong></p>
+        <p>Huile sur papier entoilé- 40 x 30 cm</p>
+        <p>80€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Réflexion.jpg" class="glightbox" data-gallery="galerie" data-title="Réflexion - 2019<br>Huile sur papier - 30 x 40 cm avec passepartout<br>80€">
+          <img src="images/Réflexion.jpg" alt="Réflexion">
+      </a>
+        <p><strong>Réflexion - 2019</strong></p>
+        <p>Huile sur papier entoilé- 30 x 40 cm</p>
+        <p>80€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/En scène.jpg" class="glightbox" data-gallery="galerie" data-title="En scène - 2019<br>Huile sur papier - 40 x 50 cm avec passepartout<br>150€">
+          <img src="images/En scène.jpg" alt="En scène">
+      </a>
+        <p><strong>En scène - 2019</strong></p>
+        <p>Huile sur papier entoilé - 40 x 50 cm</p>
+        <p>150€</p>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 - Angela Bellini</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    closeButton: true,
+    zoomable: true,
+    descPosition: 'bottom'  // 👈 C'est cette ligne qui force l'affichage du texte
+  });
+</script>
+</body>
+</html>
