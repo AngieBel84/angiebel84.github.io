@@ -80,6 +80,26 @@
       height: auto;
     }
 
+            .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
+
     footer {
       text-align: center;
       padding: 20px;

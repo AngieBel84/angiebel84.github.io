@@ -8,12 +8,13 @@
 
   <style>
     .contact-main {
-      margin-top: 150px; /* Ajuste selon la hauteur de ta navbar */
+      margin-top: 40px; /* Ajuste selon la hauteur de ta navbar */
       text-align: center;
-        display: flex;
-  justify-content: center; /* centre horizontalement */
-  padding: 40px 20px;
-}
+      display: flex;
+      justify-content: center; /* centre horizontalement */
+      padding: 40px 20px;
+   }
+
 .contact-section {
   width: 100%;
   max-width: 500px; /* limite la largeur max pour ne pas que ça soit trop large */
@@ -45,6 +46,26 @@
 
 .contact-section button:hover {
   background-color: #c04848;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
 }
   
   </style>

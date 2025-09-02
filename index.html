@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
   <style>
 
-      .hero {
+    .hero {
         position: relative;
         align-items: center !important;
         height: 100vh !important;
@@ -43,27 +43,47 @@
         object-fit: cover;
         display: block;
     }
-    .hero-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-}
+      .hero-buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
 
-.btn {
-  background-color: rgba(255, 255, 255, 0.85);
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+      .btn {
+        background-color: rgba(255, 255, 255, 0.85);
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-.btn:hover {
-  background-color: #333;
-  color: #fff;
-}
+      .btn:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+      .navbar {
+        display: flex;
+        justify-content: center; /* centre tout le contenu de la navbar */
+        align-items: center;
+        flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+    }
+
+      .menu {
+        display: flex;
+        justify-content: center; /* centre les éléments dans la liste */
+        flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+      .menu li {
+        margin: 0 10px; /* espace entre les options */
+    }
 
     @media (max-width: 768px) {
       .hero {

@@ -14,14 +14,19 @@
       color: #fff;
       font-family: 'Montserrat', sans-serif;
     }
-  
+
     .page-title {
       text-align: center;
-      font-size: 2em;
+      font-size: 2.4em;
+      color: #333;       /* noir/gris foncé */
+      margin: 40px 0 20px;
+      font-family: 'Playfair Display', serif; /* pour donner un côté élégant */
     }
-    galerie-main { 
-margin-top: 20px;
-}
+
+    .galerie-main { 
+      margin-top: 40px;
+    }
+
     .galerie-grid {
       display: flex;
       justify-content: center;
@@ -42,7 +47,7 @@ margin-top: 20px;
     .oeuvre img {
       width: 300px;
       height: 300px;
-      object-fit: cover;
+      object-fit: contain;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
@@ -83,6 +88,25 @@ margin-top: 20px;
       max-width: 90%;  /* au lieu de 100% */
       max-height: 90%; /* au lieu de 100% */
     }
+  .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
     
   </style>
 </head>
@@ -216,6 +240,78 @@ margin-top: 20px;
         <p><strong>Les mains de la recherche - 2021</strong></p>
         <p>Acrylique sur toile - 50 x 50 cm</p>
         <p>250€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Bonne dégustation.jpg" class="glightbox" data-gallery="galerie" data-title="Bonnes dégustation - 2024<br>Acrylique sur toile - 20 x 20 cm<br>100€">
+          <img src="images/Bonne dégustation.jpg" alt="Bonne dégustation">
+      </a>
+        <p><strong>Bonne dégustation - 2024</strong></p>
+        <p>Acrylique sur toile - 20 x 20 cm</p>
+        <p>100€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Contact spatiale.jpg" class="glightbox" data-gallery="galerie" data-title="Contact spatiale - 2023<br>Acrylique sur toile - 15 x 15 cm<br>80€">
+          <img src="images/Contact spatiale.jpg" alt="Contact spatiale">
+      </a>
+        <p><strong>Contact spatiale - 2023</strong></p>
+        <p>Acrylique sur toile - 15 x 15 cm</p>
+        <p>80€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/inconnu.jpg" class="glightbox" data-gallery="galerie" data-title="Inconnu - 2019<br>Huile sur papier entoilé - 13 x 13 cm<br>50€">
+          <img src="images/inconnu.jpg" alt="Inconnu">
+      </a>
+        <p><strong>Inconnu - 2023</strong></p>
+        <p>Huile sur papier - 13 x 13 cm</p>
+        <p>50€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Le laser de la délivrance_Bellini.jpg" class="glightbox" data-gallery="galerie" data-title="Le laser de la délivrance - 2022<br>Acrylique sur toile - 50 x 50 cm<br>250€">
+          <img src="images/Le laser de la délivrance_Bellini.jpg" alt="Le laser de la délivrance">
+      </a>
+        <p><strong>Le laser de la délivrance- 2022</strong></p>
+        <p>Acrylique sur toile - 50 x 50 cm</p>
+        <p>250€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/marquage bleu.jpg" class="glightbox" data-gallery="galerie" data-title="Marquage bleu  - 2022<br>Acrylique sur toile - 12 x 12 cm<br>150€">
+          <img src="images/marquage bleu.jpg" alt="Marquage bleu">
+      </a>
+        <p><strong>Marquage bleu- 2022</strong></p>
+        <p>triptyque acrylique sur toile - 12 x 12 cm</p>
+        <p>150€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/striés en rose.jpg" class="glightbox" data-gallery="galerie" data-title="Striés en rose  - 2022<br>Acrylique sur toile - 12 x 12 cm<br>150€">
+          <img src="images/striés en rose.jpg" alt="Striés en rose">
+      </a>
+        <p><strong>striés en rose- 2022</strong></p>
+        <p>diptyque acrylique sur toile - 12 x 12 cm</p>
+        <p>100€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/cristaux.jpg" class="glightbox" data-gallery="galerie" data-title="Cristaux  - 2022<br>Acrylique sur toile - 12 x 12 cm<br>50€">
+          <img src="images/cristaux.jpg" alt="Cristaux">
+      </a>
+        <p><strong>Cristaux- 2022</strong></p>
+        <p>acrylique sur toile - 12 x 12 cm</p>
+        <p>50€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Quand l’AI fait parler les Big data .jpg" class="glightbox" data-gallery="galerie" data-title="Cristaux  - 2021<br>Acrylique sur toile - 70 x 60 cm<br>50€">
+          <img src="images/Quand l’AI fait parler les Big data .jpg" alt="Quand l'IA fait parler les Big data">
+      </a>
+        <p><strong>Quand l'IA fait parler les Big data- 2021</strong></p>
+        <p>acrylique sur toile - 70 x 60 cm</p>
+        <p>300€</p>
       </div>
     </div>
   </main>

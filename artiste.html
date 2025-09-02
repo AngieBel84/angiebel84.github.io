@@ -9,56 +9,82 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
 </head>  
   <style>
-    .artiste-section {
-      margin-top: 120px !important;
-    }
-    
-    .container {
-      display: flex;
-      gap: 40px; /* espace entre image et texte */
-      align-items: flex-start; /* alignement en haut */
-      max-width: 1000px; /* limite la largeur max de la section */
-      margin: 0 auto; /* centre horizontalement la section */
-      padding: 0 20px;
+.container {
+  display: flex;
+  gap: 30px; /* espace entre image et texte */
+  align-items: flex-start; /* alignement en haut */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.bio-image {
+  flex: 0 0 300px; /* réduit la largeur de l'image */
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.bio-text {
+  flex: 1; /* texte prend le reste de la place */
+  background-color: rgba(255, 255, 255, 0.1); 
+  padding: 20px;
+  border-radius: 8px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.galerie-main { 
+      margin-top: 40px;
     }
 
-    .bio-image {
-      flex: 0 0 350px; /* largeur fixe de l'image */
-    }
+      .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+}
 
-    .bio-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 15px; /* coins arrondis optionnels */
-      display: block;
-    }
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
 
-    .bio-text {
-      flex: 1; /* prend tout l'espace restant */
-      background-color: rgba(255, 255, 255, 0.1); /* léger fond transparent (optionnel) */
-      padding: 20px;
-      border-radius: 8px;
-      color: #333; /* texte blanc */
-      font-family: 'Montserrat', sans-serif;
-      box-sizing: border-box;
-      text-align: justify;
-      box-sizing: border-box;
-    }
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
 
-    .bio-box p {
-      margin-bottom: 1em;
-    }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      color: #aaa;
-    }
+/* Version mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* image au-dessus, texte en dessous */
+    gap: 20px;
+    align-items: center;
+  }
 
-    .artiste-section {
-      margin-top: 20px; /* Ajuste selon la hauteur de ta navbar */
-    }
+  .bio-image {
+    flex: unset;
+    width: 100%;
+    max-width: 300px; /* limite la taille sur mobile */
+  }
+
+  .bio-text {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+  }
+}
 
   </style>
   </head>

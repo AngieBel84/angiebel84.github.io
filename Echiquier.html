@@ -15,13 +15,17 @@
       color: #fff;
       font-family: 'Montserrat', sans-serif;
     }
-  
+
     .page-title {
       text-align: center;
-      font-size: 2em;
+      font-size: 2.4em;
+      color: #333;       /* noir/gris foncé */
+      margin: 40px 0 20px;
+      font-family: 'Playfair Display', serif; /* pour donner un côté élégant */
     }
-    galerie-main { 
-      margin-top: 20px;
+
+    .galerie-main { 
+      margin-top: 40px;
     }
     .galerie-grid {
       display: flex;
@@ -48,7 +52,7 @@
       padding: 5px; /* petit espace autour de l’image */
       box-sizing: border-box;
       box-sizing: border-box;
-  border: 1px solid #ccc; /* bordure grise */
+      border: 1px solid #ccc; /* bordure grise */
       cursor: pointer;
       transition: transform 0.3s ease;
     }
@@ -89,6 +93,25 @@
     .gslide-desc strong {
       color: #fff !important;
     }
+        .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
     
   </style>
 </head>
@@ -250,9 +273,17 @@
         <p>Huile sur papier entoilé - 24 x 30 cm</p>
         <p>75€</p>
       </div>
+
+      <div class="oeuvre">
+        <a href="images/a la peche aux etoiles.jpg" class="glightbox" data-gallery="galerie" data-title="A la pêche aux étoiles - 2020<br>Acrylique sur toile - 50 x 50 cm <br>75€">
+          <img src="images/a la peche aux etoiles.jpg" alt="A la pêche aux étoiles">
+      </a>
+        <p><strong>A la pêche aux étoiles - 2020</strong></p>
+        <p>Acrylique sur toile - 50 x 50 cm</p>
+        <p>400€</p>
+      </div>
     </div>
   </main>
-  
   
   <footer>
     <p>&copy; 2025 - Angela Bellini</p>

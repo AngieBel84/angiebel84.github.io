@@ -2,21 +2,26 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Art et Science - Angela Bellini</title>
+  <title>La mer - Angela Bellini</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <!-- Ton CSS perso -->
   <link rel="stylesheet" href="style.css">
-  <!-- Ajout pour la lightbox -->
+
   <style>
-  
-    .galerie-main {
-      margin-top: 100px; /* Ajuste selon la hauteur de ta navbar */
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
     }
   
     .page-title {
       text-align: center;
-      margin-top: 80px;
       font-size: 2em;
     }
-
+    galerie-main { 
+margin-top: 20px;
+}
     .galerie-grid {
       display: flex;
       justify-content: center;
@@ -25,51 +30,90 @@
       padding: 20px;
     }
 
+    .oeuvre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px; /* même taille que l’image */
+        /* Ne pas fixer la hauteur, ou laisser auto */
+      overflow: visible; /* important si overflow caché */
+    }
+
     .oeuvre img {
       width: 300px;
       height: 300px;
-      object-fit: cover;
+      object-fit: contain;
       cursor: pointer;
       transition: transform 0.3s ease;
-}
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 2.4em;
+      color: #333;       /* noir/gris foncé */
+      margin: 40px 0 20px;
+      font-family: 'Playfair Display', serif; /* pour donner un côté élégant */
+    }
 
     .oeuvre img:hover {
       transform: scale(1.05);
     }
 
     .oeuvre p {
+      color: #333;
       text-align: center;
-      margin-top: 10px;
-    }
-
-    /* Lightbox (image en grand) */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-
-    .lightbox:target {
-      display: flex;
+      margin: 5px 0;
+      font-size: 14px;
     }
 
     .header {
-  padding-bottom: 100px;
+      padding-bottom: 100px;
+    }
+    
+        .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
 }
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    .gdesc, .gslide-desc {
+      background-color: rgb(0, 0, 0, 0.8) !important;
+      color: white !important;
+      padding: 20px !important;
+      font-size: 16px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .glightbox-container .gslide-image img {
+      max-width: 90%;  /* au lieu de 100% */
+      max-height: 90%; /* au lieu de 100% */
+    }
+    
   </style>
 </head>
+
 <body>
   <header>
     <nav class="navbar">
@@ -88,148 +132,44 @@
     </nav>
   </header>
 
-  <main class="galerie-main">
-    <h1 class="page-title">Art et Science</h1>
 
-    <div class="galerie-grid">
-      <div class="oeuvre">
-        <a href="#img1">
-          <img src="images/oeuvre1.jpg" alt="Chimeres toxiques">
-        </a>
-        <p><strong>Chimères toxiques - 2025</strong></p>
-        <p>Acrylique sur papier - 20 x 20 cm</p>
-        <p>100€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img2">
-          <img src="images/oeuvre2.jpg" alt="La cicatrice de la terre">
+  <main class="galerie-main">
+    <h1 class="page-title">La mer</h1>
+
+  <div class="galerie-grid">
+    <div class="oeuvre">
+      <a href="images/meduses.jpg" class="glightbox" data-gallery="galerie" data-title="Méduses triptyque - 2016<br>Huile sur papier entoilé- 14 x 24 cm<br>300€">
+        <img src="images/meduses.jpg" alt="Méduses">
       </a>
-        <p><strong>La cicatrice de la terre - 2025</strong></p>
-        <p>Acrylique sur papier - 20 x 20 cm</p>
-        <p>100€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img3">
-          <img src="images/oeuvre3.jpg" alt="Eclats de vie">
+      <p><strong>Méduses - 2016</strong></p>
+      <p>Huile sur papier entoilé- 14 x 24 cm</p>
+      <p>300€</p>
+    </div>
+
+      <div class="oeuvre" >
+        <a href="images/fonds marins.jpg" class="glightbox" data-gallery="galerie" data-title="Fonds marins - 2016<br>Huile sur papier entoilé- 14 x 24 cm<br>300€">
+          <img src="images/fonds marins.jpg" alt="Fonds marins">
       </a>
-        <p><strong>Eclats de vie- 2025</strong></p>
-        <p>Acrylique sur papier - 20 x 20 cm</p>
-        <p>100€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img4">
-          <img src="images/autoflagellation.jpg" alt="Autoflagellation">
-      </a>
-        <p><strong>Autoflagellation - 2021</strong></p>
-        <p>Acrylique sur papier entoilé - 41 x 33 cm</p>
-        <p>500€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img5">
-          <img src="images/noyaux-enbleu.jpg" alt="noyaux-enbleu">
-      </a>
-        <p><strong>Noyaux habillés en bleu - 2020</strong></p>
-        <p>Acrylique sur toile - 80 x 80 cm</p>
-        <p>550€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img6">
-          <img src="images/galaxie-astrocytes-2020.jpg" alt="galaxie-astrocytes-2020">
-      </a>
-        <p><strong>Galaxie d'astrocytes - 2020</strong></p>
-        <p>Acrylique sur toile - 40 x 40 cm</p>
-        <p>200€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img7">
-          <img src="images/avalanche de cellule.jpg" alt="avalanche de cellule">
-      </a>
-        <p><strong>Avalanche de cellules - 2021</strong></p>
-        <p>Acrylique sur toile - 80 x 80 cm</p>
-        <p>550€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img8">
-          <img src="images/noyau enrose.jpg" alt="noyau enrose">
-      </a>
-        <p><strong>Noyaux habillés en rose - 2020 </strong></p>
-        <p>Acrylique sur toile - 54 x 46 cm</p>
-        <p>350€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img9">
-          <img src="images/Therapy station_Bellini.jpg" alt="Therapy station_Bellini">
-      </a>
-        <p><strong>Therapy station</strong></p>
-        <p>Acrylique sur toile - 50 x 50 cm</p>
-        <p>500€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img10">
-          <img src="images/2021 A Body Odyssey.jpg" alt="2021 A Body Odyssey">
-      </a>
-        <p><strong>Body Odyssey - 2021</strong></p>
-        <p>Acrylique sur toile - 46 x 37 cm</p>
-        <p>250€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img11">
-          <img src="images/CRISPR_cas9.jpg" alt="CRISPR_cas9">
-      </a>
-        <p><strong>CRISPR-cas9 - 2021</strong></p>
-        <p>Acrylique sur toile - 30 x 30 cm</p>
-        <p>200€</p>
-      </div>
-      <div class="oeuvre">
-        <a href="#img12">
-          <img src="images/les mains de la recherche.jpg" alt="les mains de la recherche">
-      </a>
-        <p><strong>Les mains de la recherche - 2021</strong></p>
-        <p>Acrylique sur toile - 50 x 50 cm</p>
-        <p>200€</p>
+        <p><strong>Fonds marins - 2016</strong></p>
+        <p>Huile sur papier entoilé - 50 x 40 cm</p>
+        <p>300€</p>
       </div>
     </div>
   </main>
-  <!-- Lightbox modals -->
-  <div id="img1" class="lightbox">
-    <a href="#!"><img src="images/oeuvre1.jpg" alt="Chimères toxiques"></a>
-  </div>
-  <div id="img2" class="lightbox">
-    <a href="#!"><img src="images/oeuvre2.jpg" alt="La cicatrice de la terre"></a>
-  </div>
-  <div id="img3" class="lightbox">
-    <a href="#!"><img src="images/oeuvre3.jpg" alt="Éclats de vie"></a>
-  </div>
-  <div id="img4" class="lightbox">
-    <a href="#!"><img src="images/autoflagellation.jpg" alt="Autoflagellation"></a>
-  </div>
-  <div id="img5" class="lightbox">
-    <a href="#!"><img src="images/noyaux-enbleu.jpg" alt="noyaux-enbleu"></a>
-  </div>
-  <div id="img6" class="lightbox">
-    <a href="#!"><img src="images/galaxie-astrocytes-2020.jpg" alt="galaxie-astrocytes-2020"></a>
-  </div>
-  <div id="img7" class="lightbox">
-    <a href="#!"><img src="images/avalanche de cellule.jpg" alt="avalanche de cellules"></a>
-  </div>
-  <div id="img8" class="lightbox">
-    <a href="#!"><img src="images/noyau enrose.jpg" alt="noyau enrose"></a>
-  </div>
-  <div id="img9" class="lightbox">
-    <a href="#!"><img src="images/Therapy station_Bellini.jpg" alt="Therapy station_Bellini"></a>
-  </div>
-  <div id="img10" class="lightbox">
-    <a href="#!"><img src="images/2021 A Body Odyssey.jpg" alt="2021 A Body Odyssey"></a>
-  </div>
-  <div id="img11" class="lightbox">
-    <a href="#!"><img src="images/CRISPR_cas9.jpg" alt="CRISPR_cas9"></a>
-  </div>
-    <div id="img12" class="lightbox">
-    <a href="#!"><img src="images/les mains de la recherche.jpg" alt="les mains de la recherche"></a>
-  </div>
+  
   <footer>
     <p>&copy; 2025 - Angela Bellini</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    closeButton: true,
+    zoomable: true,
+    descPosition: 'bottom'  // 👈 C'est cette ligne qui force l'affichage du texte
+  });
+</script>
 </body>
 </html>
-

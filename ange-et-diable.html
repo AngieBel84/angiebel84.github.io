@@ -3,18 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Ange et Diable - Angela Bellini</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <link rel="stylesheet" href="style.css">
     <style>
   
-    .galerie-main {
-      margin-top: 100px; /* Ajuste selon la hauteur de ta navbar */
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
     }
-  
+
     .page-title {
       text-align: center;
-      margin-top: 80px;
-      font-size: 2em;
+      font-size: 2.4em;
+      color: #333;       /* noir/gris foncé */
+      margin: 40px 0 20px;
+      font-family: 'Playfair Display', serif; /* pour donner un côté élégant */
     }
+
+    .galerie-main { 
+      margin-top: 40px;
+    }
+
     .galerie-grid {
       display: flex;
       justify-content: center;
@@ -23,10 +34,19 @@
       padding: 20px;
     }
 
+    .oeuvre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px; /* même taille que l’image */
+        /* Ne pas fixer la hauteur, ou laisser auto */
+      overflow: visible; /* important si overflow caché */
+    }
+
     .oeuvre img {
       width: 300px;
       height: 300px;
-      object-fit: cover;
+      object-fit: contain;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
@@ -36,36 +56,57 @@
     }
 
     .oeuvre p {
+      color: #333;
       text-align: center;
-      margin-top: 10px;
-    }
-
-    /* Lightbox (image en grand) */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-
-    .lightbox:target {
-      display: flex;
+      margin: 5px 0;
+      font-size: 14px;
     }
 
     .header {
-  padding-bottom: 100px;
+      padding-bottom: 100px;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    .gdesc, .gslide-desc {
+      background-color: rgb(0, 0, 0, 0.8) !important;
+      color: white !important;
+      padding: 20px !important;
+      font-size: 16px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .glightbox-container .gslide-image img {
+      max-width: 90%;  /* au lieu de 100% */
+      max-height: 90%; /* au lieu de 100% */
+    }
+  .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
 }
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
+
   </style>
 </head>
 <body>
@@ -91,18 +132,53 @@
 
     <div class="galerie-grid">
       <div class="oeuvre">
-        <a href="#img1">
-          <img src="images/la norma.jpg" alt="La norma">
-        </a>
-        <p><strong>La Norma - 2025</strong></p>
+       <a href="images/la norma.jpg" class="glightbox" data-gallery="galerie">
+        <img src="images/la norma.jpg" alt="La norma">
+       </a>
+        <p><strong>La Norma - 2018</strong></p>
         <p>Huile sur toile - triptyque 
-          <p>46 × 33 cm ; 65 × 54 cm ; 46 × 33 cm</p></p>
+          <p>46 × 33 cm ; 65 × 54 cm ; 46 × 33 cm</p>
         <p>700€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Le sommeil des innocents.jpg" class="glightbox" data-gallery="galerie" data-title="Le sommeil des innocents - 2020 <br>Acrylique et collage sur papier entoilé - 33 x 41 cm<br>100€">
+          <img src="images/Le sommeil des innocents.jpg" alt="Le sommeil des innocents-2020">
+        </a>
+        <p><strong>Le sommeil des innocents - 2019</strong></p>
+        <p>Acrylique et collage sur papier entoilé - 33 x 41 cm</p>
+        <p>100€</p>
+      </div>
+
+       <div class="oeuvre">
+        <a href="images/Duo musicale.jpg" class="glightbox" data-gallery="galerie" data-title="Duo musicale - 2020 <br>Huile sur papier entoilé - 40 x 53 cm avec passepartout noir et cadre<br>200€">
+          <img src="images/Duo musicale.jpg" alt="Duo musicale-2020">
+        </a>
+        <p><strong>Duo musicale - 2020</strong></p>
+        <p>Huile sur papier entoilé - 43 x 53 cm avec passepartout noir et cadre</p>
+        <p>200€</p>
+      </div>
+
+       <div class="oeuvre">
+        <a href="images/une grenorange.jpg" class="glightbox" data-gallery="galerie" data-title="Une grenorange - 2020 <br>Huile sur papier entoilé - 43 x 50 cm avec passepartout noir<br>120€">
+          <img src="images/une grenorange.jpg" alt="Une grenorange-2020">
+        </a>
+        <p><strong>Une grenorange - 2020</strong></p>
+        <p>Huile et collage sur papier entoilé - 40 x 50 cm avec passepartout noir</p>
+        <p>120€</p>
       </div>
   </main>
 
   <footer>
     <p>&copy; 2025 - Angela Bellini</p>
   </footer>
+    <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox',
+      touchNavigation: true,
+      loop: true,
+      closeButton: true
+    });
+  </script>
 </body>
 </html>

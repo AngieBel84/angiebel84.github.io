@@ -2,15 +2,123 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Voyages - Angela Bellini</title>
+  <title>Voyages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <!-- Ton CSS perso -->
   <link rel="stylesheet" href="style.css">
-</head>
+
   <style>
-    .galerie-main {
-      margin-top: 150px; /* Ajuste selon la hauteur de ta navbar */
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+    }
+  
+    .page-title {
+      text-align: center;
+      font-size: 2.4em;
+      color: #333;       /* noir/gris foncé */
+      margin: 40px 0 20px;
+      font-family: 'Playfair Display', serif; /* pour donner un côté élégant */
     }
 
+    .galerie-main { 
+    margin-top: 40px;
+    }
+
+    .galerie-grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .oeuvre {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px; /* même taille que l’image */
+        /* Ne pas fixer la hauteur, ou laisser auto */
+      overflow: visible; /* important si overflow caché */
+    }
+
+.oeuvre img {
+  width: 300px;      /* largeur fixe */
+  height: 300px;     /* hauteur fixe */
+  object-fit: contain; /* toute l’image visible sans rognage */
+  background-color: #f5f5f5; /* petit fond gris clair derrière si ça ne remplit pas tout */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+    .oeuvre img:hover {
+      transform: scale(1.05);
+    }
+
+    .oeuvre p {
+      color: #333;
+      text-align: center;
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .header {
+      padding-bottom: 100px;
+    }
+    
+    main {
+  margin-top: 500px; /* exactement la hauteur du header */
+  padding: 20px;
+  min-height: calc(100vh - 120px - 60px); /* header (120px) + footer (60px) */
+  background-color: #fff;
+    }
+
+        .navbar {
+  display: flex;
+  justify-content: center; /* centre tout le contenu de la navbar */
+  align-items: center;
+  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+}
+
+.menu {
+  display: flex;
+  justify-content: center; /* centre les éléments dans la liste */
+  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menu li {
+  margin: 0 10px; /* espace entre les options */
+}
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #aaa;
+    }
+
+    .gdesc, .gslide-desc {
+      background-color: rgb(0, 0, 0, 0.8) !important;
+      color: white !important;
+      padding: 20px !important;
+      font-size: 16px !important;
+      font-family: 'Montserrat', sans-serif !important;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .glightbox-container .gslide-image img {
+      max-width: 100%;  /* au lieu de 100% */
+      max-height: 100%; /* au lieu de 100% */
+    }
+    
   </style>
+</head>
+
 <body>
   <header>
     <nav class="navbar">
@@ -32,17 +140,175 @@
   <main class="galerie-main">
     <h1 class="page-title">Voyages</h1>
 
-    <div class="galerie-grid">
-      <div class="oeuvre">
-        <img src="images/voyage1.jpg" alt="Titre 4">
-        <p>Titre 4 – 700€</p>
+  <div class="galerie-grid">
+    <div class="oeuvre">
+      <a href="images/Partrullo 2024.jpg" class="glightbox" data-gallery="galerie" data-title="Partrullo - 2024<br>Acrylique sur toile - 50 x 50 cm<br>100€">
+        <img src="images/Partrullo 2024.jpg" alt="Partrullo">
+      </a>
+      <p><strong>Partrullo - 2024</strong></p>
+      <p>Acrylique sur toile - 50 x 50 cm</p>
+      <p>300€</p>
+    </div>
+
+      <div class="oeuvre" >
+        <a href="images/croisement de rues.jpg" class="glightbox" data-gallery="galerie" data-title="Croisement de rues - 2024<br>Acrylique sur papier - 16 x 21 cm avec passepartout et cadre<br>30€">
+          <img src="images/croisement de rues.jpg" alt="Croisement de rues">
+      </a>
+        <p><strong>Croisement de rues - 2024</strong></p>
+        <p>Acrylique sur papier - 16 x 21 cm avec passepartout et cadre</p>
+        <p>30€</p>
       </div>
-      <!-- Tu peux ajouter plus d’œuvres ici -->
+
+      <div class="oeuvre">
+        <a href="images/Dieppe.jpg" class="glightbox" data-gallery="galerie" data-title="Dieppe - 2025<br>Acrylique sur papier - 33 x 33 cm avec passepartout et cadre<br>50€">
+          <img src="images/Dieppe.jpg" alt="Dieppe">
+      </a>
+        <p><strong>Dieppe - 2025</strong></p>
+        <p>Acrylique sur papier - 33 x 33 cm avec passepartout et cadre</p>
+        <p>50€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Parihellas.jpg" class="glightbox" data-gallery="galerie" data-title="Parihellas - 2025<br>Acrylique sur papier entoilé - 16,5 x 16,5 cm avec passepartout et cadre<br>25€">
+          <img src="images/Parihellas.jpg" alt="Parihellas">
+        </a>
+        <p><strong>Parihellas - 2025</strong></p>
+        <p>Acrylique sur papier - 16,5 x 16,5 cm avec passepartout et cadre</p>
+        <p>25€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/new city.jpg" class="glightbox" data-gallery="galerie" data-title="New city - 2025<br>Acrylique sur toile - 16 x 21 cm avec passepartout et cadre<br>30€">
+          <img src="images/new city.jpg" alt="New city">
+        </a>
+        <p><strong>New city - 2025</strong></p>
+        <p>Acrylique sur papier - 16 x 21 cm avec passepartout et cadre</p>
+        <p>30€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Paris_porto fusion.jpg" class="glightbox" data-gallery="galerie" data-title="Paris_Porto fusion - 2025 <br>Acrylique sur papier - 33 x 33 cm<br>50€">
+          <img src="images/Paris_porto fusion.jpg" alt="Paris_Porto fusion-2025">
+        </a>
+        <p><strong>Paris_Porto fusion - 2025</strong></p>
+        <p>Acrylique sur papier - 33 x 33 cm avec passepartout et cadre</p>
+        <p>50€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Orient au boulevard.jpg" class="glightbox" data-gallery="galerie" data-title="Orient au Boulevard - 2024 <br>Acrylique sur papier - 23 x 23 cm<br>40€">
+          <img src="images/Orient au boulevard.jpg" alt="Orient au Boulevard">
+      </a>
+        <p><strong>Orient au Boulevard - 2024</strong></p>
+        <p>Acrylique sur papier - 23 x 23 cm avec passepartout et cadre</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/la ville de pierre.jpg" class="glightbox" data-gallery="galerie" data-title="La vilel de pierre - 2024 <br>Acrylique sur papier - 23 x 23 cm<br>40€">
+          <img src="images/la ville de pierre.jpg" alt="La ville de pierre">
+      </a>
+        <p><strong>La ville de pierre - 2024 </strong></p>
+        <p>Acrylique sur papier - 23 x 23 cm avec passepartout et cadre</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/entre racines et rouages.jpg" class="glightbox" data-gallery="galerie" data-title="Entre racines et rouages - 2025 <br>Acrylique, collage et porcelaine froide sur toile - 20 x 20 cm<br>100€">
+          <img src="images/entre racines et rouages.jpg" alt="Entre racines et rouages">
+      </a>
+        <p><strong>Entre racines et rouages - 2025</strong></p>
+        <p>Acrylique, collage et porcelaine froide sur toile - 20 x 20 cm</p>
+        <p>100€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Pouilles sur Seine.jpg" class="glightbox" data-gallery="galerie" data-title="Pouilles sur Seine - 2024<br>Acrylique et collage sur toile - 20 x 20 cm<br>100€">
+          <img src="images/Pouilles sur Seine.jpg" alt="Pouilles sur Seine">
+      </a>
+        <p><strong>Pouilles sur Seine - 2024</strong></p>
+        <p>Acrylique et collage sur toile - 20 x 20 cm</p>
+        <p>100€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/le royaume de Cancercity.jpg" class="glightbox" data-gallery="galerie" data-title="Le Royaume de Cancer City - 2021<br>Acrylique sur papier - 33 x 43 cm<br>90€">
+          <img src="images/le royaume de Cancercity.jpg" alt="Le royaume de Cancer city">
+      </a>
+        <p><strong>Le royaume de Cancer City - 2021</strong></p>
+        <p>Acrylique sur papier - 33 x 43 cm avec passepartout et cadre</p>
+        <p>90€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Orient au boulevard.jpg" class="glightbox" data-gallery="galerie" data-title="Orient au Boulevard - 2023<br>Acrylique et collage sur papier - 23 x 23 cm<br>40€">
+          <img src="images/Orient au boulevard.jpg" alt="Orient au Boulevard">
+      </a>
+        <p><strong>Orient au Boulevard - 2023</strong></p>
+        <p>Acrylique et collage sur papier - 23 x 23 cm avec cadre</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/la ville de pierre.jpg" class="glightbox" data-gallery="galerie" data-title="La ville de pierre - 2023<br>Acrylique et collage sur papier - 23 x 23 cm<br>40€">
+          <img src="images/la ville de pierre.jpg" alt="La ville de pierre">
+      </a>
+        <p><strong>La ville de pierre - 2023</strong></p>
+        <p>Acrylique et collage sur papier - 23 x 23 cm avec cadre</p>
+        <p>40€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/Parihellas.jpg" class="glightbox" data-gallery="galerie" data-title="Parihellas - 2023<br>Acrylique sur papier - 16,5 x 16,5 cm<br>20€">
+          <img src="images/Parihellas.jpg" alt="Parihellas">
+      </a>
+        <p><strong>Parihellas - 2023</strong></p>
+        <p>Acrylique sur papier - 23 x 23 cm avec cadre</p>
+        <p>20€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/croisement de rues.jpg" class="glightbox" data-gallery="galerie" data-title="Croisements des rues - 2023<br>Acrylique sur papier - 21 x 16 cm<br>30€">
+          <img src="images/croisement de rues.jpg" alt="Croisement des rues">
+      </a>
+        <p><strong>Croisement des rues - 2023</strong></p>
+        <p>Acrylique sur papier - 21 x 16 cm avec passepartout et cadre</p>
+        <p>30€</p>
+      </div>
+
+      <div class="oeuvre">
+        <a href="images/au fleuve.jpg" class="glightbox" data-gallery="galerie" data-title="Au fleuve - 2023<br>Acrylique sur toile - 20 x 20 cm<br>100€">
+          <img src="images/au fleuve.jpg" alt="Au fleuve">
+      </a>
+        <p><strong>Au fleuve - 2024</strong></p>
+        <p>Acrylique sur toile - 20 x 20 cm</p>
+        <p>100€</p>
+      </div>
+
+      <div class="oeuvre">
+       <a href="veuilleuse.html">
+         <img src="images/Veuilleuse_2.jpg" alt="Voir la lampe">
+      </a>
+      <p><strong>Lampe Partrullo - 2024</strong></p>
+        <p>Acrylique sur boite à champagne</p>
+        <p>200€</p>
+    </div>
     </div>
   </main>
-
+  
   <footer>
     <p>&copy; 2025 - Angela Bellini</p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    loop: true,
+    closeButton: true,
+    zoomable: true,
+    descPosition: 'bottom'  // 👈 C'est cette ligne qui force l'affichage du texte
+  });
+</script>
 </body>
 </html>

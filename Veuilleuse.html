@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Lampe décorative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- CSS de GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+  <style>
+    main {
+      margin-top: 100px;
+      margin: 150px auto 50px auto;
+      padding: 20px;
+      max-width: 950px;
+    }
+
+    figure {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* ---- Barre de navigation ---- */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .menu li {
+      margin: 0 10px;
+    }
+
+/* ---- Images de l’exposition ---- */
+.exposition-detail figure img,
+.exposition-layout img {
+  width: 250px;       /* largeur fixe */
+  height: 250px;      /* hauteur fixe identique */
+  object-fit: cover;  /* recadre l’image sans la déformer */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.exposition-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.exposition-layout img:hover {
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/Logo artiste.jpg" alt="Logo Angela Bellini" class="logo-img">
+        </a>
+      </div>
+      <ul class="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="artiste.html">L'artiste</a></li>
+        <li><a href="galerie.html">Les Œuvres</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="ses-expositions.html">Ses expositions</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="exposition-detail">
+      <h1>Lampe décorative</h1>
+
+      <p><strong>Description :</strong> La lampe décorative <em>Partrullo</em> est un petit monde de lumière né d'une boite à champagne. Sur les cotés, sous un ciel étoilé, apparaissent deux villes imaginaires. À l'interieur une branche de bois flotté illuminée soutient une cité miniature enfermée dans un tube à essai en verre.
+    Polyvalente, la lampe peut être accrochée au mur ou posée sur un meuble pour sublimer votre intérieur.</p>
+      <p><strong>Date :</strong> 2024</p>
+      <p><strong>Dimensions :</strong> 14 x 14 x 41 cm </p>
+
+      <!-- Galerie des 4 petites images -->
+      <div class="exposition-layout">
+        <a href="images/Veuilleuse_2.jpg" class="glightbox" data-gallery="galerie213" data-title="La lampe">
+          <img src="images/Veuilleuse_2.jpg" alt="Lampe décorative">
+        </a>
+
+        <a href="images/Veuilleuse_1.jpg" class="glightbox" data-gallery="galerie213" data-title="La lampe">
+          <img src="images/Veuilleuse_1.jpg" alt="Lampe décorative">
+        </a>
+
+        <a href="images/Veuilleuse_3.jpg" class="glightbox" data-gallery="galerie213" data-title="La lampe">
+          <img src="images/Veuilleuse_3.jpg" alt="Lampe décorative">
+        </a>
+
+        <a href="images/Veuilleuse_4.jpg" class="glightbox" data-gallery="galerie213" data-title="La lampe">
+          <img src="images/Veuilleuse_4.jpg" alt="Lampe décorative">
+        </a>
+
+        <a href="images/veuilleuse_5.jpg" class="glightbox" data-gallery="galerie213" data-title="La lampe">
+          <img src="images/veuilleuse_5.jpg" alt="Lampe décorative">
+        </a>
+
+        <a href="images/veuilleuse_6.jpg" class="glightbox" data-gallery="galerie213" data-title="La lampe">
+          <img src="images/veuilleuse_6.jpg" alt="Lampe décorative">
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Angela Bellini</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+</body>
+</html>
