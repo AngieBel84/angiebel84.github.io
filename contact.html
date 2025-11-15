@@ -8,12 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
 
   <style>
-
 .contact-main {
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* mieux pour le contenu vertical */
-  flex-direction: column; /* par défaut pour mobile */
+  flex-direction: column;
+  justify-content: center; /* centre verticalement */
+  align-items: center;     /* centre horizontalement */
+  min-height: 80vh;
+  width: 100%;
+  text-align: center;
 }
 
 body, html {
@@ -21,15 +23,6 @@ body, html {
   padding: 0;
   width: 100%;
 }
-
-.contact-main {
-  min-height: 80vh; /* pour centrer verticalement si tu veux */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 
 .contact-section {
   width: 100%;
