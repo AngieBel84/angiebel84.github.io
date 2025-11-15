@@ -19,25 +19,20 @@
     font-weight: bold;
     }
 
-    .categorie-grid {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      padding: 20px;
-      justify-content: center;
-      align-items: flex-start;
-      object-fit: contain;
-    }
+.categorie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* un peu moins sur mobile */
+  padding: 10px;
+}
 
-    .categorie img {
-      width: 300px;
-      height: 300px;
-      object-fit: contain;
-      cursor: pointer;
-      background-color: #0c0b0b; /* ou white */
-      transition: transform 0.3s ease;
-    }
+.categorie img {
+  width: 100%;
+  max-width: 300px;
+  height: auto; /* pour garder le ratio */
+  object-fit: contain;
+}
 
     .categorie img:hover {
       transform: scale(1.05);
