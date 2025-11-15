@@ -30,11 +30,11 @@
       box-sizing: border-box;
     }
 
-      .hero-images {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
-        width: 100%;
-        height: 100%;
+    .hero-images img {
+    width: 100%;
+    height: auto;   /* ← l’image garde ses proportions ! */
+    object-fit: cover;
+    display: block;
     }
 
       .hero-images img {
