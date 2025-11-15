@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
   <title>Contact - Mon Art</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
 
   <style>
-    .contact-main {
-      margin-top: 40px; /* Ajuste selon la hauteur de ta navbar */
-      text-align: center;
-      display: flex;
-      justify-content: center; /* centre horizontalement */
-      padding: 40px 20px;
-   }
+
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* mieux pour le contenu vertical */
+  flex-direction: column; /* par défaut pour mobile */
+}
+
 
 .contact-section {
   width: 100%;
