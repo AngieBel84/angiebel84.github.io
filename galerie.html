@@ -7,109 +7,77 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Montserrat&display=swap" rel="stylesheet">
   <style>
     .galerie-main {
-    margin-top: 40px; /* correspond à la hauteur de ton header */
-    text-align: center;
-    }
+  margin-top: 100px; /* espace par rapport à la navbar */
+  text-align: center;
+}
 
-    .page-title {
-    text-align: center;
-    padding-top: 20px; /* espace par rapport au header */
-    margin-bottom: 40px; /* espace entre titre et catégories */
-    font-size: 2.5em;
-    font-weight: bold;
-    }
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: bold;
+}
 
 .categorie-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px; /* un peu moins sur mobile */
+  gap: 15px;
   padding: 10px;
 }
 
 .categorie img {
   width: 100%;
   max-width: 300px;
-  height: auto; /* pour garder le ratio */
+  height: auto;
   object-fit: contain;
+  transition: transform 0.3s;
 }
 
-    .categorie img:hover {
-      transform: scale(1.05);
-    }
+.categorie img:hover {
+  transform: scale(1.05);
+}
 
-    .categorie h2 {
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
+.categorie h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
 
-    .categorie p {
-      text-align: center;
-      margin-top: 10px;
-    }
+.categorie p {
+  text-align: center;
+  margin-top: 10px;
+}
 
-    /* Lightbox (image en grand) */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-
-    .lightbox:target {
-      display: flex;
-    }
-
-    .header {
-      padding-bottom: 100px;
-    }
-    .navbar {
+.navbar {
   display: flex;
-  justify-content: center; /* centre tout le contenu de la navbar */
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* permet le retour à la ligne sur mobile */
+  flex-wrap: wrap;
 }
 
 .menu {
   display: flex;
-  justify-content: center; /* centre les éléments dans la liste */
-  flex-wrap: wrap; /* pour éviter que ça déborde sur petit écran */
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .menu li {
-  margin: 0 10px; /* espace entre les options */
-} 
-
-@media (max-width: 768px) {
-  .menu li a {
-    font-size: 1em;       /* un peu plus petit que sur PC mais lisible */
-    padding: 8px 10px;
-  }
-      @media (max-width: 768px) {
-      .hero {
-        flex-direction: column;
-        padding: 0 10px;
-      }
-
-      .hero-text h1 {
-        font-size: 2em;
-      }
+  margin: 0 10px;
 }
 
+/* Media query pour mobile */
+@media (max-width: 768px) {
+  .menu li a {
+    font-size: 1em;
+    padding: 8px 10px;
+  }
+
+  .galerie-main {
+    margin-top: 130px; /* espace pour que le titre ne soit pas caché */
+  }
 
   .categorie-grid {
     gap: 10px;
@@ -121,6 +89,7 @@
     height: auto;
   }
 }
+
 
   </style>
 </head>
