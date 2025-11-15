@@ -92,13 +92,24 @@
 
 .menu li {
   margin: 0 10px; /* espace entre les options */
-}  
- @media (max-width: 768px) {
-  .page-title {
-    font-size: 2em;
-    padding-top: 10px;
-    margin-bottom: 20px;
+} 
+
+@media (max-width: 768px) {
+  .menu li a {
+    font-size: 1em;       /* un peu plus petit que sur PC mais lisible */
+    padding: 8px 10px;
   }
+      @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 0 10px;
+      }
+
+      .hero-text h1 {
+        font-size: 2em;
+      }
+}
+
 
   .categorie-grid {
     gap: 10px;
