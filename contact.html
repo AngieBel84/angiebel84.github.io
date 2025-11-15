@@ -69,24 +69,22 @@
   margin: 0 10px; /* espace entre les options */
 }
 
-/* Version mobile */
-  @media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* image au-dessus, texte en dessous */
-    gap: 20px;
-    align-items: center;
+@media (max-width: 768px) {
+  .contact-main {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .bio-image {
-    flex: unset;
+  .contact-section {
     width: 100%;
-    max-width: 300px; /* limite la taille sur mobile */
+    max-width: 100%;
   }
 
-  .bio-text {
-    width: 100%;
-    font-size: 16px;
-    text-align: left;
+  .contact-section input,
+  .contact-section textarea,
+  .contact-section button {
+    font-size: 1em;
+    padding: 10px;
   }
 }
 
