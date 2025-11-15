@@ -109,12 +109,25 @@
     .menu li {
      margin: 0 10px; /* espace entre les options */
     }
-    /* Version mobile */
-@media (max-width: 768px) {
+
+/* Version mobile */
+@media (max-width: 768px)
   .container {
     flex-direction: column; /* image au-dessus, texte en dessous */
     gap: 20px;
     align-items: center;
+  }
+
+  .bio-image {
+    flex: unset;
+    width: 100%;
+    max-width: 300px; /* limite la taille sur mobile */
+  }
+
+  .bio-text {
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
   }
 
   .bio-image {
